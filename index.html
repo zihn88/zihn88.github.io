@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang | ZIHN</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome (Untuk Ikon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Konfigurasi Tailwind Kustom -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Background Hero Section kustom */
+        .bg-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Navbar (Minimalis) -->
+    <nav class="absolute top-0 w-full z-20 px-6 py-5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white tracking-wider">ZIHN<span class="text-blue-500">.</span></a>
+            
+            <!-- Menu Navigasi (Sementara hanya dummy) -->
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-300">
+                <a href="#" class="hover:text-white transition-colors">Beranda</a>
+                <a href="#" class="hover:text-white transition-colors">Layanan</a>
+                <a href="#" class="hover:text-white transition-colors">Portofolio</a>
+                <a href="#" class="hover:text-white transition-colors">Kontak</a>
+            </div>
+            
+            <!-- Tombol Mobile (Hamburger) -->
+            <button class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="flex-grow flex items-center justify-center bg-hero relative overflow-hidden min-h-[90vh]">
+        <!-- Efek Glow Dekoratif di Background -->
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-[100px] opacity-30"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-indigo-600 rounded-full mix-blend-multiply filter blur-[100px] opacity-30"></div>
+
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto mt-16 md:mt-0">
+            <!-- Badge -->
+            <span class="px-4 py-1.5 rounded-full bg-blue-900/40 text-blue-300 text-xs font-semibold tracking-widest uppercase border border-blue-700/50 mb-6 inline-block">
+                Sedang Dalam Pengembangan
+            </span>
+            
+            <!-- Judul -->
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Membangun Solusi Digital yang <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Luar Biasa</span>
+            </h1>
+            
+            <!-- Deskripsi -->
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Halaman ini akan segera terhubung dengan ekosistem backend berbasis Google Apps Script. Saat ini kami sedang meracik kode terbaik untuk Anda.
+            </p>
+            
+            <!-- Tombol CTA -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-rocket"></i> Hubungi Kami
+                </a>
+                <a href="#" class="px-8 py-3.5 bg-transparent hover:bg-gray-800 text-white border border-gray-600 hover:border-gray-500 rounded-lg font-semibold transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-code"></i> Lihat Proyek
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-gray-500 py-6 text-center text-sm border-t border-gray-900">
+        <p>&copy; 2026 ZIHN. Dibuat dengan <i class="fa-solid fa-heart text-red-600 mx-1"></i> di Gresik.</p>
+    </footer>
+
+</body>
+</html>
