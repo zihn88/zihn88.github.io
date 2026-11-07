@@ -79,7 +79,8 @@
 
   .page {
     position: relative;
-    min-height: 100svh;
+    min-height: 100vh;
+    min-height: 100dvh;
     padding: calc(var(--pad) * .9) var(--pad) calc(var(--pad) * .55);
     display: grid;
     grid-template-rows: 1fr auto;
@@ -91,10 +92,10 @@
     font-family: var(--serif);
     font-weight: 300;
     font-size: clamp(4rem, 15.5vw, 13rem);
-    line-height: .9;
+    line-height: .95;
     letter-spacing: -0.02em;
   }
-  h1 .line { display: block; overflow: hidden; padding-bottom: .08em; }
+  h1 .line { display: block; overflow: hidden; padding-bottom: .14em; }
   h1 .line:nth-child(2) { padding-left: .55em; }
   h1 .line span {
     display: block;
@@ -136,8 +137,10 @@
     list-style: none; margin: 1.9rem 0 0; padding: 0;
     display: flex; flex-wrap: wrap; gap: .75rem;
   }
+  .links li { margin: 0; min-width: 0; }
   .links a {
     display: inline-block;
+    white-space: nowrap;
     text-decoration: none;
     font-weight: 500;
     font-size: .975rem;
@@ -164,8 +167,23 @@
     letter-spacing: .02em;
   }
 
-  @media (max-width: 560px) {
+  @media (max-width: 640px) {
+    .page { padding: 3.25rem 1.75rem 2rem; }
+    h1 { font-size: clamp(3.5rem, 19vw, 6.5rem); line-height: 1; }
+    h1 .line { padding-bottom: .16em; }
     h1 .line:nth-child(2) { padding-left: .3em; }
+    .lead { max-width: 100%; }
+    .links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .65rem;
+    }
+    .links li:last-child { grid-column: 1 / -1; }
+    .links a { display: block; width: 100%; text-align: center; padding: .75rem .5rem; }
+    footer { font-size: .8125rem; }
+  }
+  @media (hover: none) {
+    .links a:hover { transform: none; }
   }
   @media (prefers-reduced-motion: reduce) {
     .b { animation: none; }
